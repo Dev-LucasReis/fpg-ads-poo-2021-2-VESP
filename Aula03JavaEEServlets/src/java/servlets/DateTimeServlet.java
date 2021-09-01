@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Valdereis
+ * @author Lucas dos Santos Reis
  */
 @WebServlet(name = "DateTimeServlet", urlPatterns = {"/date-time.html"})
 public class DateTimeServlet extends HttpServlet {

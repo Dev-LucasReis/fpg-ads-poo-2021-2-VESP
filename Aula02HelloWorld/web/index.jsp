@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
     Created on : 14 de ago. de 2021, 16:40:10
-    Author     : Valdereis
+    Author     : Lucas dos Santos Reis
 --%>
 
 <%@page import="java.util.Date"%>

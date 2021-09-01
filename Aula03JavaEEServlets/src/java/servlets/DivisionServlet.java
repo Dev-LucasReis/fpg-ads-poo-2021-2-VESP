@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Valdereis
+ * @author Lucas dos Santos Reis
  */
 @WebServlet(name = "DivisionServlet", urlPatterns = {"/division.html"})
 public class DivisionServlet extends HttpServlet {

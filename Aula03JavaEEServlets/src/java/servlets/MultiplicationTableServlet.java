@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Valdereis
+ * @author Lucas dos Santos Reis
  */
 @WebServlet(name = "MultiplicationTableServlet", urlPatterns = {"/multiplication-table.html"})
 public class MultiplicationTableServlet extends HttpServlet {

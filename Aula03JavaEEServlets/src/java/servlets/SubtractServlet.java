@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Valdereis
+ * @author Lucas dos Santos Reis
  */
 @WebServlet(name = "SubtractServlet", urlPatterns = {"/subtract.html"})
 public class SubtractServlet extends HttpServlet {

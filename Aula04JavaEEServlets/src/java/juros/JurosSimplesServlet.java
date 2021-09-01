@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Valdereis
+ * @author Lucas dos Santos Reis
  */
 @WebServlet(name = "JurosSimplesServlet", urlPatterns = {"/juros-simples.html"})
 public class JurosSimplesServlet extends HttpServlet {

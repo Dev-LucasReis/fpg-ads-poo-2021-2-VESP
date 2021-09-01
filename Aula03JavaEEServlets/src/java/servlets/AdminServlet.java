@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Valdereis
+ * @author Lucas dos Santos Reis
  */
 @WebServlet(name = "AdminServlet", urlPatterns = {"/admin.html"})
 public class AdminServlet extends HttpServlet {

@@ -16,7 +16,7 @@ import javax.swing.text.html.HTML;
 
 /**
  *
- * @author Valdereis
+ * @author Lucas dos Santos Reis
  */
 @WebServlet(name = "JurosCompostoServlet", urlPatterns = {"/juros-composto.html"})
 public class JurosCompostoServlet extends HttpServlet {
