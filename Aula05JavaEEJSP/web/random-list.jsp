@@ -43,9 +43,9 @@
           <%}%>
           <hr/>
             <form>
-                <input type="number" name="n" value="<%= n %>"/>
+                <input type="number" name="n" value="<%= n %>"/> 
             <input type="submit" value="Gerar"/>
             </form>
-        <h3><a href="index.html"><< Back</a><h3/>
+        <a href="index.html"><< Back</a>
     </body>
 </html>

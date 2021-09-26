@@ -1,0 +1,48 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<%
+    if(request.getParameter("auth-login")!=null){
+        String userName = request.getParameter("auth-username");
+        session.setAttribute("auth-username", userName);
+        response.sendRedirect(request.getRequestURI());
+    }else if(request.getParameter("auth-logout")!=null){
+        session.removeAttribute("auth-username");
+        response.sendRedirect(request.getRequestURI());
+    }
+    String authUserName = (String) session.getAttribute("auth-username");
+%>
+
+<% 
+   int n = 6;
+%>
+
+<title>LucasReisApp</title>
+<form method="post">
+    <a href="index.jsp">INÍCIO</a> | 
+    <a href="about.jsp">PERFIL</a> | 
+  
+    <%if(authUserName == null ){%>
+        <input type="text" name="auth-username"/>
+        <input type="password" name="auth-usersenha"/>
+        <input type="submit" name="auth-login" value="LOGIN"/>
+    <%}else{%>
+        Bem vindo, <%= authUserName %>
+        <input type="submit" name="auth-logout" value="LOGOUT"/>
+        <hr/>
+        <table border = "1">
+            <tr>
+                <th>Indice</th>
+                <th>Numero</th>
+            </tr>    
+                <% for (int i = 1; i <= n; i ++){ %>
+            <tr>
+                <td><%= i %></td>
+                <td><%= ((int) (100*Math.random())) %></td>
+            </tr>  
+                   <%}%>  
+        </table>
+        <hr/>
+        
+    <%}%>
+</form>
+<hr/>
