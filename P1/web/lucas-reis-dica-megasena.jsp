@@ -6,6 +6,9 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+    ArrayList<Integer> numbers = (ArrayList)session.getAttribute("auth-numbers");
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -15,21 +18,21 @@
         <%@include file="WEB-INF/jspf/header.jspf" %>
         <h1>MEGASENA:</h1>
         <hr/><!-- comment -->
-        <%if(authUserName == null){%>
-        <p style="color: red">Você não tem permissao para ver este conteudo!</p>
+        <%if(session.getAttribute("auth-username")==null){%>
+            <div>Você não tem permissão para ver essa página</div>
+        <%}else if(numbers == null){%>
+            <div>Não foram gerados números para você. :(</div>
         <%}else{%>
-        <table border="2">
-            <tr>
-                <th>INDICE:</th>
-                <th>NUMEROS:</th>
-            </tr>
-            <% for (int i = 0; i <= 6; i ++){%>
-            <tr>
-                <td><%= i %></td>
-                <td><%= ((int) (60*Math.random())) %></td>
-            </tr>
-            <%}%>
-        </table>
+            <table border="1">
+                <tr>
+                    <th>Número</th>
+                </tr>
+                <%for(int n: numbers){%>
+                <tr>
+                    <td><%= n %></td>
+                </tr>
+                <%}%>
+            </table>
         <%}%>
     </body>
 </html>

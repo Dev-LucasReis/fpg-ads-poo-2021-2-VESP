@@ -16,7 +16,7 @@
         
         <h1>PERFIL</h1>
         <hr/>
-        <%if(authUserName == null){%>
+        <%if(session.getAttribute("auth-username") == null){%>
         <p style="color: red">Você não tem permissao para ver este conteudo!</p>
         <%}else{%>
         <h2>RA: 1290482012021</h2>

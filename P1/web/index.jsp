@@ -6,6 +6,14 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+    int sessions = 0;
+    ArrayList<String> sessionList = null;
+    if(application.getAttribute("sessionList")!=null){
+        sessionList = (ArrayList)application.getAttribute("sessionList");
+        sessions = sessionList.size();
+    }
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -15,21 +23,14 @@
         <%@include file="WEB-INF/jspf/header.jspf" %>
         <h2>P1 - POO</h2>
         <hr/><!-- Quebra de linha -->
-        <p>Conteudo Publico...</p>
-        
-        <% int cont = 0;%>
-        <% if(authUserName != null){%>
-        A quantidade total de usuários identificados (logados) no site:
-        <% cont = cont + 1;%>
-        <% out.print(cont); %>
-        <hr/>
-        
-        <table border = "2">
-            <tr>
-                <th>Nomes das sessões identificadas no momento:</th>
-            </tr>
-            <tr><td><%=authUserName%></td></tr> 
-        </table>
-        <%}else{cont = cont -1;}%>
+        <h2>Página inicial</h2>
+        <h3>Sessões: <u><%= sessions %></u></h3>
+        <%if(session.getAttribute("auth-username")!=null && sessionList!=null){%>
+        <ul>
+            <%for(String name: sessionList){%>
+            <li><%= name %></li>
+            <%}%>
+        </ul>
+        <%}%>
     </body>
 </html>
