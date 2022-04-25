@@ -67,3 +67,6 @@ hs_err_pid*
 /04-Servlets-com-parâmetros/build/
 /05 - Projeto JurosCalc (com servlets)/nbproject/private/
 /05 - Projeto JurosCalc (com servlets)/build/
+/09-ControleDeSessao/nbproject/private/
+/09-ControleDeSessao/dist/
+/09-ControleDeSessao/build/
